@@ -4,21 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="./public/utility.css">
     <link rel="stylesheet" href="./public/style.css">
     <title>Tax calculator</title>
 </head>
 
 <body>
-    <div class="outer-container f-center h-w-100">
+    <div class="outer-container f-center h-w-100 f-d-col">
 
         <div class="popup op-0 f-center" id="top-popup">
             <span>
-
                 Enter numbers only
             </span>
+        </div>
+        <div class="end-res  op-1 f-center" id="res-pop-up">
+            <div class="the-frame">
+                <div class="inc-statement f-center">
+                    Your overall income will be 
+                </div>
+                <div class="calu-inc f-center" id="d-amount">
+
+                </div>
+                <div class="simp-statement f-center font-12">
+                    After tax deductions
+                </div>
+
+                <div class="btn-item-div f-center">
+                    <button class="close-btn mouse-pointer" id="close-btn-01"> Close </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div>
+            <h1 class="uppercase h1-01">
+                Tax calculator
+            </h1>
         </div>
 
         <div class="inner-container f-center h-w-100">
@@ -27,7 +49,11 @@
             <form action="abc.js " class="f-center h-w-100 f-d-col" id="the-form">
 
                 <div class="field-1 field f-center f-d-col w-300 m-t-10 h-42">
-                    <label for="1" class="font-12 s-al-right">Enter gross annual income <span></span> </label>
+                    <label for="1" class="font-12 s-al-right">Enter gross annual income 
+                        <span class="mouse-pointer info" title="Gross annual income is your total salary in a year before any deductions">
+                            ?
+                        </span> 
+                    </label>
                     <span class="h-42">
                         <input type="text" name="income" id="1" class="w-300 font-full-black input-fields-1 input-b-black" type="">
                         <div class="error f-center mouse-pointer b-black" title="Enter numbers only" id="error-cir">
@@ -37,17 +63,32 @@
                 </div>
 
                 <div class="field-2 field f-center f-d-col w-300 m-t-10 h-42">
-                    <label for="2" class="font-12 s-al-right">Enter extra income </label>
+                    <label for="2" class="font-12 s-al-right">
+                        Enter extra income 
+                        <span class="mouse-pointer info" title="Extra income is your earning from some side hustles a year before any deductions">
+                            ?
+                        </span> 
+                    </label>
                     <input type="text" name="extra_income" id="2" class="w-300 font-full-black input-fields-1 input-b-black">
                 </div>
 
                 <div class="field-3 field f-center f-d-col w-300 m-t-10 h-42">
-                    <label for="3" class="font-12 s-al-right">Enter age group </label>
+                    <label for="3" class="font-12 s-al-right">
+                        Enter age group 
+                        <span class="mouse-pointer info" title="Age is find the amount of text you are going to pay">
+                            ?
+                        </span> 
+                    </label>
                     <input type="number" min="18" max="100" name="age_group" id="3" class="w-300 font-full-black input-fields-1 input-b-black">
                 </div>
 
                 <div class="field-4 field f-center f-d-col w-300 m-t-10 h-42">
-                    <label for="4" class="font-12 s-al-right">Enter total applicable deductions </label>
+                    <label for="4" class="font-12 s-al-right">
+                        Enter total applicable deductions 
+                        <span class="mouse-pointer info" title="deductions means the amount you burnt/spend over this year">
+                            ?
+                        </span> 
+                    </label>
                     <input type="text" name="deductions" id="4" class="w-300 font-full-black input-fields-1 input-b-black">
                 </div>
                 <div class="field-4 field f-center f-d-col w-300 m-t-10 h-42">
@@ -55,6 +96,9 @@
                 </div>
 
             </form>
+        </div>
+        <div class="font-12">
+            <a href="https://github.com/HarshitSaini0/Tax-caluclator" target="_blank">Git Hub Link</a>
         </div>
     </div>
     <script src="./public/script.js"></script>

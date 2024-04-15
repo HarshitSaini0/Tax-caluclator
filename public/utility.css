@@ -68,3 +68,6 @@ border-color: rgba(0, 0, 0,0.5);
 .text-w-100{
   color: aliceblue;
 }
+.uppercase{
+  text-transform: uppercase;
+}

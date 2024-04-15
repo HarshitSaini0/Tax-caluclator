@@ -2,6 +2,9 @@ const myForm = document.getElementById('the-form');
 const errorSymbol = document.getElementById('error-sym');
 const errorCircle = document.getElementById('error-cir');
 const inputElements = document.querySelectorAll('.input-fields-1');
+const FinalIncomeValueElement = document.getElementById('d-amount');
+const resPopUp = document.getElementById('res-pop-up');
+const closeButton = document.getElementById('close-btn-01');
 
 
 function calAfterAmount(grossAnnualIncome, extraIncome, deduction) {
@@ -95,6 +98,32 @@ async function popup(content) {
     // await new Promise()
 
 }
+async function popInResElement(){
+    resPopUp.classList.add('op-1');
+    resPopUp.classList.remove('op-0');
+   resPopUp.classList.add('animate-in-1')
+   await new Promise(resolve => {
+       setTimeout(resolve, 280);
+    });
+    resPopUp.classList.remove('animate-in-1')
+
+}
+
+async function popOutResElement(){
+    resPopUp.classList.add('animate-out-1');
+    await new Promise(resolve => {
+        setTimeout(resolve, 280);
+    });
+    resPopUp.classList.remove('animate-out-1');
+    resPopUp.classList.remove('op-1');
+    resPopUp.classList.add('op-0');
+}
+
+function numberWithCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  
+  
 
 myForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -122,9 +151,14 @@ myForm.addEventListener('submit', (event) => {
         if (hasTax) {
             const tax = theTax(theAmount, myArray[2]);
             const FinalIncome = theAmount - tax;
-            console.log(FinalIncome);
+
+            FinalIncomeValueElement.innerHTML = numberWithCommas(FinalIncome);
+            popInResElement();
+            
+           
         } else {
-            console.log(theAmount);
+            FinalIncomeValueElement.innerHTML = numberWithCommas(theAmount);
+            popInResElement();
         }
     }
 
@@ -138,7 +172,9 @@ inputElements.forEach(element => {
         element.classList.add('input-b-black')
     })
 })
-
+closeButton.addEventListener('click',()=>{
+    popOutResElement();
+})
 
 
 

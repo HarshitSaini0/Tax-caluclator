@@ -17,7 +17,10 @@ body{
     height: 100vh;
     width: 100vw;
 }
-
+.h1-01{
+    font-size: 24px;
+    font-weight: normal;
+}
 .card{
     /*  */
 }
@@ -68,6 +71,12 @@ animation: popin 0.3s ease;
 .animate-out{
     animation: popout 0.3s ease;
     }
+    .animate-out-1{
+        animation: popout1 0.5s ease-in-out;
+        }
+        .animate-in-1{
+            animation: popin1 0.5s ease-in-out;
+            }
 @keyframes popin {
     from{
         top:10%;
@@ -84,10 +93,72 @@ animation: popin 0.3s ease;
         top: -10%;
     }
 }
-
+@keyframes popout1 {
+    from{
+        top: 20%;
+    }
+    to{
+        top: 0;
+    }
+}
+@keyframes popin1 {
+    from{
+        top: 30%;
+    }
+    to{
+        top: 20%;
+    }
+}
 .submit-btn{
     background: #6355fd;
     outline: none;
     border: none;
     height: 40px;
+}
+
+.info{
+    display: inline-block;
+    color: #b4b0e6;
+   
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.end-res{
+    position: absolute;
+    
+    max-width: 400px;
+    min-width: 340px;
+    max-height: 400px;
+    width: 60%;
+    height: 60%;
+    background: #ffffff;
+    border: 2px #b4b0e6 solid;
+    border-radius: 16px;
+
+}
+.the-frame{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(8,1fr);
+}
+
+
+
+.btn-item-div{
+grid-row-start: 7;
+}
+
+
+.close-btn{
+    width: 70%;
+    background: #6355fd;
+    outline: none;
+    border: 2px white solid;
+    height: 40px;
+    color: white;
 }
