@@ -14,27 +14,50 @@
 <body>
     <div class="outer-container f-center h-w-100">
 
+        <div class="popup op-0 f-center" id="top-popup">
+            <span>
+
+                Enter numbers only
+            </span>
+        </div>
+
         <div class="inner-container f-center h-w-100">
-            <form action="abc.js " class="f-center h-w-100 f-d-col">
-                <div class="field-1 field f-center f-d-col w-300 m-t-10">
+
+
+            <form action="abc.js " class="f-center h-w-100 f-d-col" id="the-form">
+
+                <div class="field-1 field f-center f-d-col w-300 m-t-10 h-42">
                     <label for="1" class="font-12 s-al-right">Enter gross annual income <span></span> </label>
-                    <input type="text" name="income" id="1" class="w-300">
+                    <span class="h-42">
+                        <input type="text" name="income" id="1" class="w-300 font-full-black input-fields-1 input-b-black" type="">
+                        <div class="error f-center mouse-pointer b-black" title="Enter numbers only" id="error-cir">
+                            <span class="error-span font-black" id="error-sym">!</span>
+                        </div>
+                    </span>
                 </div>
-                <div class="field-2 field f-center f-d-col w-300 m-t-10">
+
+                <div class="field-2 field f-center f-d-col w-300 m-t-10 h-42">
                     <label for="2" class="font-12 s-al-right">Enter extra income </label>
-                    <input type="text" name="extra_income" id="2" class="w-300">
+                    <input type="text" name="extra_income" id="2" class="w-300 font-full-black input-fields-1 input-b-black">
                 </div>
-                <div class="field-3 field f-center f-d-col w-300 m-t-10">
+
+                <div class="field-3 field f-center f-d-col w-300 m-t-10 h-42">
                     <label for="3" class="font-12 s-al-right">Enter age group </label>
-                    <input type="text" name="extra_income" id="3" class="w-300">
+                    <input type="number" min="18" max="100" name="age_group" id="3" class="w-300 font-full-black input-fields-1 input-b-black">
                 </div>
-                <div class="field-4 field f-center f-d-col w-300 m-t-10">
+
+                <div class="field-4 field f-center f-d-col w-300 m-t-10 h-42">
                     <label for="4" class="font-12 s-al-right">Enter total applicable deductions </label>
-                    <input type="text" name="extra_income" id="4" class="w-300">
+                    <input type="text" name="deductions" id="4" class="w-300 font-full-black input-fields-1 input-b-black">
                 </div>
+                <div class="field-4 field f-center f-d-col w-300 m-t-10 h-42">
+                    <input type="submit" value="Submit" class="w-300 font-full-black submit-btn text-w-100 mouse-pointer"> 
+                </div>
+
             </form>
         </div>
     </div>
+    <script src="./public/script.js"></script>
 </body>
 
 </html>

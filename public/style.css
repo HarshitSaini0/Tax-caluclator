@@ -9,12 +9,85 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: aliceblue;
+    color: #5647fb;
 }
 
 body{
-    background-color: #171717;
+    background-color: #e2dfff;
     height: 100vh;
     width: 100vw;
 }
 
+.card{
+    /*  */
+}
+.error{
+    height: 16px;
+    width: 16px;
+    
+    text-align: center;
+    /* padding: 0.5rem; */
+    border-width: 2px ;
+    border-style:  solid;
+    border-radius: 50px;
+
+    z-index: 4;
+    position:relative;
+
+    top: -24px;
+    left: calc(100% - 22px);
+    /* left: -40px; */
+}
+
+
+.error-span{
+
+font-size: 12px;
+}
+
+.popup{
+    position: absolute;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    background: #bfbaff;
+    top:0;
+}
+.input-fields-1{
+    padding: 0.3rem;
+}
+.input-fields-1:focus{
+outline: none;
+border: 2px #6559f5 solid;
+}
+
+.animate-in{
+animation: popin 0.3s ease;
+}
+.animate-out{
+    animation: popout 0.3s ease;
+    }
+@keyframes popin {
+    from{
+        top:10%;
+    }
+    to{
+        top: 0;
+    }
+}
+@keyframes popout {
+    from{
+        top:0;
+    }
+    to{
+        top: -10%;
+    }
+}
+
+.submit-btn{
+    background: #6355fd;
+    outline: none;
+    border: none;
+    height: 40px;
+}
