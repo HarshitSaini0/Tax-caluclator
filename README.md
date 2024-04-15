@@ -16,7 +16,4 @@ Assumed age to be between **18** to **100**
 >This project is created using HTML, CSS and JavaScript Only , though i have tried to use some of the latest features of HTML, CSS and JS. 
 
 
->
->
-
 >Here is link [Click here to view project](https://fyle-tax-calculator-harshit.netlify.app/).
