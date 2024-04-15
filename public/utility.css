@@ -1,0 +1,27 @@
+.f-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.f-d-col{
+flex-direction: column;
+}
+.h-w-100{
+    height: 100%;
+    width:  100%;
+}
+.font-12{
+    font-size: 12px;
+}
+.s-al-right{
+    align-self:flex-start;
+}
+.w-300{
+    width: 300px;
+}
+.p-10{
+    padding: 10px;
+}
+.m-t-10{
+    margin-top: 10px;
+}
