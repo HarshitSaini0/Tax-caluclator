@@ -8,7 +8,7 @@ const myForm = document.getElementById('the-form');
 const errorSymbol = document.getElementById('error-sym');
 const errorCircle = document.getElementById('error-cir');
 const inputElements = document.querySelectorAll('.input-fields-1');
-const FinalIncomeValueElement = document.getElementById('d-amount');
+const finalIncomeValueElement = document.getElementById('d-amount');
 const resPopUp = document.getElementById('res-pop-up');
 const closeButton = document.getElementById('close-btn-01');
 
@@ -216,12 +216,12 @@ myForm.addEventListener('submit', (event) => {
             const tax = theTax(theAmount, myArray[2]);
             const FinalIncome = theAmount - tax;
 
-            FinalIncomeValueElement.innerHTML = numberWithCommas(FinalIncome);
+            finalIncomeValueElement.innerHTML = numberWithCommas(FinalIncome);
             popInResElement();
             
            
         } else {
-            FinalIncomeValueElement.innerHTML = numberWithCommas(theAmount);
+            finalIncomeValueElement.innerHTML = numberWithCommas(theAmount);
             popInResElement();
         }
     }
